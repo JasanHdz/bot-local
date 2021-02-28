@@ -1,37 +1,49 @@
 import { createTemplate, templateMessage } from './template.js'
+import { containts } from './parser.js'
 
 const $send = document.getElementById('send')
 const $form = document.getElementsByTagName('form')[0]
 const $input = document.getElementsByName('message')[0]
 const $inbox = document.getElementsByClassName('inbox')[0]
 
-$send.addEventListener('click', function () {
-  if ($input.value) {
-    console.log('enviamos el mensaje')
-    addMessage()
-  }
-})
+$send.addEventListener('click', addMessage)
+$form.addEventListener('submit', handleSubmit)
 
-$form.addEventListener('submit', function (event) {
+function handleSubmit(event) {
   event.preventDefault()
   addMessage()
-})
+}
+
+function addElementHTML(message, user = "bot") {
+  const HTMLString = templateMessage(message, user)
+  const messageElement = createTemplate(HTMLString)
+  $inbox.append(messageElement[0])
+}
 
 function addMessage() {
-  const formData = new FormData($form)
-  const message = formData.get('message')
-  $input.value = ''
-  const HTMLString = templateMessage(message, "me")
-  addElementHTML(HTMLString)
-  getBotMessage(message)
+  if ($input.value) {
+    const formData = new FormData($form)
+    const message = formData.get('message')
+    $input.value = ''
+    addElementHTML(message, "me")
+    getBotMessage(message.toLowerCase())
+    $inbox.scrollTop = $inbox.scrollHeight
+  }
 }
 
 function getBotMessage(message) {
-  const HTMLString = templateMessage('Bot ha recibido el mensaje', 'bot')
-  addElementHTML(HTMLString)
-}
-
-function addElementHTML(HTMLString) {
-  const messageElement = createTemplate(HTMLString)
-  $inbox.append(messageElement[0])
+  switch (true) {
+    case containts(message, ["hola", "hi"]): 
+      return addElementHTML("Hola")
+    case containts(message, ["llamas", "tu nombre"]): 
+      return addElementHTML("Me llamo Mohamed Ali")
+    case containts(message, ["como estas"]):
+      return addElementHTML("Muy bien tu?")
+    case containts(message, ["creo", "creador", "mision"]): 
+      return addElementHTML("Me creo Jasan Hernández con azucar amor y muchos colores ❤")
+    case containts(message, ["de que se trata el bot", "proposito", "bot", "dedicas"]):
+      return addElementHTML("Me dedicó a resolver problemas de la FCC")
+    default: 
+      return addElementHTML("Disculpá, creo que no te entendí")
+  }
 }

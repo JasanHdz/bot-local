@@ -1,0 +1,7 @@
+export function containts(target, pattern) {
+  let value = 0
+  pattern.forEach(word => {
+    value = value + target.includes(word)
+  })
+  return (value === 1)
+}
