@@ -37,9 +37,9 @@ function getBotMessage(message) {
       return addElementHTML("Hola")
     case containts(message, ["llamas", "tu nombre"]): 
       return addElementHTML("Me llamo Mohamed Ali")
-    case containts(message, ["como estas"]):
+    case containts(message, ["como estas", "cómo estás"]):
       return addElementHTML("Muy bien tu?")
-    case containts(message, ["creo", "creador", "mision"]): 
+    case containts(message, ["creo", "creó", "creador", "mision", "misión"]): 
       return addElementHTML("Me creo Jasan Hernández con azucar amor y muchos colores ❤")
     case containts(message, ["de que se trata el bot", "proposito", "bot", "dedicas"]):
       return addElementHTML("Me dedicó a resolver problemas de la FCC")
