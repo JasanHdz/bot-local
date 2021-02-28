@@ -73,7 +73,7 @@ input {
 .send:after {
   position: absolute;
   content: "";
-  background-image: url('/send.svg');
+  background-image: url('./send.svg');
   background-repeat: no-repeat;
   top: 0;
   bottom: 0;
