@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap" rel="stylesheet" />
+  <title>Chat Bot</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <section class="header">
+    <div class="user">
+      <figure class="image">
+        <img src="https://images.unsplash.com/photo-1554200876-2b37eac20913?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80" width="40" height="40" />
+      </figure>
+      <div>
+        <p>ChatBoot FCC</p>
+        <small>Active now</small>
+      </div>
+    </div>
+  </section>
+  <section class="inbox">
+    <div class="message bot"></div>
+    <div class="message me"></div>
+    <div class="message bot"></div>
+    <div class="message me"></div>
+    <div class="message bot"></div>
+    <div class="message me"></div>
+    <div class="message me"></div>
+    <div class="message bot"></div>
+    <div class="message bot"></div>
+    <div class="message me"></div>
+    <div class="message me"></div>
+    <div class="message me"></div>
+    <div class="message me"></div>
+    <div class="message me"></div>
+  </section>
+  <form method="POST" class="keyword">
+    <input name="message" type="text" placeholder="Escribe un mensaje aquí" />
+    <span id="send" class="send"></span>
+  </form>
+  <script type="module" src="/plugins/home.js"></script>
+</body>
+</html>
