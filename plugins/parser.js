@@ -38,9 +38,24 @@ class Parser {
     return Math.floor(Math.random() * (max - min)) + min
   }
 
+  #setIndexMessage(index) {
+    const size = this.#database[index].response.length - 1
+    if (this.#database[index].index === size) {
+      this.#database[index].index = 0
+    } else {
+      this.#database[index].index = (this.#database[index].index || 0) + 1
+    }
+    console.log(this.#database[index])
+  }
+
   getResponseMessage(message) {
     const index = this.#getIndexMessage(message)
     if (index >= 0) {
+      if (this.#database[index].sorted) {
+        const responseIndex = this.#database[index].index || 0
+        this.#setIndexMessage(index)
+        return this.#database[index].response[responseIndex]
+      }
       const randomNumber = this.#randomNumber(this.#database[index].response.length);
       return this.#database[index].response[randomNumber]
     } else {
