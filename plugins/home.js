@@ -23,5 +23,6 @@ function addMessage() {
     addElementHTML(message, $inbox, "me")
     addElementHTML(bot.getResponseMessage(message), $inbox)
     $inbox.scrollTop = $inbox.scrollHeight
+    $input.focus()
   }
 }
