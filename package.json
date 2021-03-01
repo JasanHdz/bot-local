@@ -3,12 +3,5 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Jasan Hernández <jasan814@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "dev": "live-server pages/",
-    "start": "live-server pages/"
-  },
-  "dependencies": {
-    "live-server": "^1.2.1"
-  }
+  "license": "MIT"
 }
