@@ -72,7 +72,7 @@ export const database = [
   },
   // Preguntas de FCC
   {
-    keywords: ["materias que abriran", "lista de materias", "publicacion de materias"],
+    keywords: ["materias"],
     sorted: true,
     response: [
       "Esten al pendiente de las redes sociales",
@@ -81,7 +81,7 @@ export const database = [
     ]
   },
   {
-    keywords: ["como solicito un casillero", "solicitud de casillero", "un casillero"],
+    keywords: ["casillero"],
     sorted: true,
     response: [
       "Necesitas ir a Secretaría académica",
@@ -90,7 +90,7 @@ export const database = [
     ]
   },
   {
-    keywords: ["como puedo hacer mi servicio", "cuando puedo hacer mi servicio", "servicio social"],
+    keywords: ["servicio"],
     sorted: true,
     response: [
       "Sigue la página de servicio social de la FCC",
@@ -99,7 +99,7 @@ export const database = [
     ]
   },
   {
-    keywords: ["como puedo hacer mis practicas", "cuando puedo hacer mis practicas", "practicas profesionales"],
+    keywords: ["practicas"],
     sorted: true,
     response: [
       "Sigue la página de prácticas profesionales de la FCC en <a target='_blank' href='https://www.facebook.com/FCCsecretariaacademica/'>Facebook<a/>",
