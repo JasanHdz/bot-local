@@ -7,6 +7,23 @@ export const database = [
     ]
   },
   {
+    keywords: ["que puedes hacer", "que haces", "como me puedes ayudar"],
+    response: [
+      `1. ayudarte a saber sobre la publicación de materias <br />
+      2. Como solicitar un casillero <br />
+      3. Información sobre el servicio social <br />
+      4. Información sobre prácticas profesionales <br />
+      5. Solicitar un asesoría con algún profesor <br />
+      6. Cuando sale la convocatoria de inscripción en la BUAP <br />
+      7. Cuales son las becas disponibles <br />
+      8. Cuales son los tramites de titulación <br />
+      9. Como levantar una queja <br />
+      10. Puedo ayudarte cuando pierdes o extravias algo en las instalaciones de la fcc <br />
+      11. como recuperar tu cuenta de autoservicios <br />
+      12. la fecha de impresión de la póliza`,
+    ]
+  },
+  {
     keywords: ["llamas", "tu nombre"],
     response: [
       "Me llamo Mohamed Ali",
